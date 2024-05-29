@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+/* General styles */
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* Root Variable */
+:root {
+    /* Primary Colors */
+
+    --GREEN-200: hsl(148, 38%, 91%);
+    --GREEN-600: hsl(169, 82%, 27%);
+    --RED: hsl(0, 66%, 54%);
+
+    /* Neutral Colors */
+
+    --WHITE: hsl(0, 0%, 100%);
+    --GREY-500: hsl(186, 15%, 59%);
+    --GREY-900: hsl(187, 24%, 22%);
+
+    /* Font Size */
+    --LABEL: 16px;
+
+    /* Font Weight */
+    --FONT-WEIGHT1: 400;
+    --FONT-WEIGHT2: 700;
+}
+
+/* Utils */
+input,
+.checkBox,
+textarea {
+    border: 2px solid var(--GREY-500);
+    border-radius: 12px;
+}
+
+.generalEnquiry-svg-block {
+    display: block;
+}
+
+.svg-wrapper-generalEnquiry-border {
+    border: none;
+}
+
+.supportRequest-svg-block {
+    display: block;
+}
+
+.svg-wrapper-supportRequest-border {
+    border: none;
+}
+
+/* Styling main section */
+#main {
+    background-color: var(--GREEN-200);
+    width: 100%;
+}
+
+.container {
+    width: 50vw;
+    margin: 3rem 0;
+}
+
+/* Styling Submit button */
+#submit-btn {
+    background: var(--GREEN-600);
+    color: white;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1000px) {
+    .container {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90vw;
+    }
+
+    .name-input {
+        flex-direction: column;
+    }
+
+    .queryType-input_wrapper {
+        flex-direction: column;
+    }
+}

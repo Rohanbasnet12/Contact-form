@@ -14,25 +14,83 @@
 
 <body>
   <main id="main">
-    <div class="container-wrapper">
-      <form id="form"></form>
+    <div class="container-wrapper w-full h-full flex items-center justify-center">
+      <div class="container bg-white p-5 rounded-xl">
+        <form id="form" onsubmit="handleSubmit()">
+          <h1 class="font-semibold text-3xl"> Contact Us </h1>
+
+          <div class="name-input flex gap-4 w-full my-4">
+            <div class="flex flex-col w-full">
+              <label for="fName" class="text-md font-semibold text-gray-500">First Name</label>
+              <input type="text" id="fName" class="py-2 px-4">
+              <p id="name-error" class="text-red-400 text-md font-semibold">This field is required</p>
+            </div>
+            <div class="flex flex-col w-full">
+              <label for="lName" class="text-md font-semibold text-gray-500">Last Name</label>
+              <input type="text" id="lName" class="py-2 px-4">
+              <p id="name-error" class="text-red-400 text-md font-semibold">This field is required</p>
+            </div>
+          </div>
+
+          <div class="email-input flex flex-col">
+            <label for="email" class="text-md font-semibold text-gray-500">Email address</label>
+            <input type="email" id="email" class="py-2 px-4">
+            <p id="invalid-email-error" class="text-red-400 text-md font-semibold">Please enter a valid email address
+            </p>
+            <p id="empty-email-error" class="text-red-400 text-md font-semibold">This field is required</p>
+          </div>
+
+          <div class="queryType-input my-4">
+            <span class="text-md font-semibold text-gray-500">Query Type</span>
+            <div class="queryType-input_wrapper flex gap-4">
+              <div class="flex flex-col w-full">
+                <div class="checkBox w-full border-2 py-3 px-4 flex items-center gap-4">
+                  <div class="svg-wrapper-generalEnquiry border-2 border-gray-300 w-5 h-5 rounded-full ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"
+                      class="hidden" id="generalEnquiry-svg">
+                      <path fill="#0C7D69"
+                        d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z" />
+                    </svg>
+                  </div>
+                  <p class="text-md font-semibold text-gray-500">General Enquiry</p>
+                </div>
+              </div>
+              <div class="flex flex-col w-full">
+                <div class="checkBox w-full border-2 py-3 px-4 flex items-center gap-4">
+                  <div class="svg-wrapper-supportRequest border-2 border-gray-300 w-5 h-5 rounded-full ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"
+                      class="hidden" id="supportRequest-svg">
+                      <path fill="#0C7D69"
+                        d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z" />
+                    </svg>
+                  </div>
+                  <p class="text-md font-semibold text-gray-500">Support Request</p>
+                </div>
+              </div>
+            </div>
+
+            <p id="name-error" class="text-red-400 text-md font-semibold">This field is required</p>
+          </div>
+
+          <div class="message-input my-4">
+            <textarea name="userMessage" id="user-message" rows="4" class="w-full px-4 py-3"></textarea>
+            <p id="name-error" class="text-red-400 text-md font-semibold">This field is required</p>
+          </div>
+
+          <button type="submit" id="submit-btn" class="w-full text-center py-3 text-md font-semibold rounded-md my-4">
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   </main>
-  Contact Us
 
-  First Name
-  This field is required
 
-  Last Name
-  This field is required
+  <!-- 
 
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
+  
+  
+  
   Please select a query type
 
   Message
@@ -41,10 +99,8 @@
   I consent to being contacted by the team
   To submit this form, please consent to being contacted
 
-  Submit
-
   Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  Thanks for completing the form. We'll be in touch soon! -->
 
   <!-- Adding jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
